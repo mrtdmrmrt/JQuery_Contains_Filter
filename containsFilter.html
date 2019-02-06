@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contains Filter</title>
+
+<script src="jquery-3.3.1.min"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			var value= $("#ara").val();
+			$("ul li").css("border","1px solid #eee");
+			$("ul li:contains('" + value+ "')").css("border","1px solid #f00");
+		})
+		//$("ul li:contains('e')").css("background-color","#ccc");
+	})
+</script>
+<style>
+	ul{
+		margin:0px;
+		padding: 0px;
+		width: 200px;
+	}
+	ul li{
+		padding: 5px 10px;
+		border: 1px solid #eee;
+		margin-bottom: 5px;
+	}
+	ul li:hover{
+		background-color: #eee;
+		border: 1px solid #ccc;
+	}
+</style>
+
+
+</head>
+<body>
+<input type="text" id="ara">
+<button>ARA</button></br><hr>
+<ul>
+	<li>1.Ahmet <span>50</span></li>
+	<li>2.Mehmet <span>100</span></li>
+	<li>3.Defne <span>90</span></li>
+	<li>4.Gökhan <span>45</span></li>
+
+</ul>
+
+</body>
+</html>
